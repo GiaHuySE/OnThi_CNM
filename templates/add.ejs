@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function validateForm() {
+            var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+            var name = document.getElementById('name').value;
+        //     let x = document.forms["myForm"]["TenBaiBao"].value;
+        //     if (x == "") {
+        //         alert("Name must be filled out");
+        //     return false;
+        // }
+            if(!regName.test(name)){
+                alert("Name is not valid");
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm" id="create" method="post" action="/" enctype="multipart/form-data" style="padding-left: 50%;" onsubmit="return validateForm()">
+        <!-- <input type="text" name="TenBaiBao" placeholder="Nhap ten bai bao" />
+        <input type="text" name="ChiSoISBN" placeholder="Nhap chi so" />
+        <input type="text" name="NamXuatBan" placeholder="Nhap nam san xuat" />
+        <input type="text" name="SoTrang" placeholder="Nhap so trang" />
+        <input type="text" name="TenNhomTacGia" placeholder="Nhap ten nhom tac gia" />
+        <input type="submit" value="Them moi san pham" /> -->
+        <div class="col mb-3">
+            <input id="name" type="text" name="TenBaiBao" placeholder="Nhap ten bai bao" required />
+        </div>
+        <div class="col mb-3">
+            <input type="text" name="ChiSoISBN" placeholder="Nhap chi so" />
+        </div>
+        <div class="col mb-3">
+            <input type="number" name="NamXuatBan" placeholder="Nhap nam san xuat" min="1990" max="2022" required/>
+        </div>
+        <div class="col mb-3">
+            <input type="number" name="SoTrang" placeholder="Nhap so trang" />
+        </div>
+        <div class="col mb-3">
+            <input type="text" name="TenNhomTacGia" placeholder="Nhap ten nhom tac gia">
+        </div>
+        <div class="col mb-3">
+            <input type="submit" value="Them bai bao" />
+        </div>
+    </form>
+    
+</body>
+</html>
