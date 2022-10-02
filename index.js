@@ -1,17 +1,16 @@
 const {req,res} = require('express');
 const express = require('express');
 const multer = require('multer');
-
+const AWS = require('aws-sdk');
 const app = express();
-const upload = multer();
 
- 
+const upload = multer();
 
 app.use(express.static('./templates'));
 app.set('view engine','ejs');
 app.set('views','./templates');
 
-const AWS = require('aws-sdk');
+
 const config = new AWS.Config({
     accessKeyId: 'AKIA47TOVKHL245ZKHXQ',
     secretAccessKey: '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',

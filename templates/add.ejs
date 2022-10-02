@@ -26,18 +26,21 @@
     </script>
 </head>
 <body>
-    <form name="myForm" id="create" method="post" action="/" enctype="multipart/form-data" style="padding-left: 50%;" onsubmit="return validateForm()">
+    <h1 style="position: absolute;left: 50%;">Thêm Bài Báo</h1>
+    <form class="form" name="myForm" id="create" method="post" action="/" enctype="multipart/form-data" style="padding-top: 100px;" onsubmit="return validateForm()">
         <!-- <input type="text" name="TenBaiBao" placeholder="Nhap ten bai bao" />
         <input type="text" name="ChiSoISBN" placeholder="Nhap chi so" />
         <input type="text" name="NamXuatBan" placeholder="Nhap nam san xuat" />
         <input type="text" name="SoTrang" placeholder="Nhap so trang" />
         <input type="text" name="TenNhomTacGia" placeholder="Nhap ten nhom tac gia" />
         <input type="submit" value="Them moi san pham" /> -->
-        <div class="col mb-3">
-            <input id="name" type="text" name="TenBaiBao" placeholder="Nhap ten bai bao" required />
+        <div class="col mb-3 form-group">
+            <label for="InputTenBaiBao">Tên bài báo</label>
+            <input class="form-control" id="name" type="text" name="TenBaiBao" placeholder="Nhap ten bai bao" required />
         </div>
-        <div class="col mb-3">
-            <input type="text" name="ChiSoISBN" placeholder="Nhap chi so" />
+        <div class="col mb-3 form-group">
+            <label for="InputChiSO">Chỉ số isbn</label>
+            <input class="form-control" type="text" name="ChiSoISBN" placeholder="Nhap chi so" />
         </div>
         <div class="col mb-3">
             <input type="number" name="NamXuatBan" placeholder="Nhap nam san xuat" min="1990" max="2022" required/>
